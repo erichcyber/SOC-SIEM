@@ -3,7 +3,7 @@
 #1 Prerequisites
 Ensure you have the following components prepared before beginning the SOC home lab setup:
 
-#Component	Description
+# Component	Description
 Memory (RAM)	At least 16 GB recommended for stable performance with multiple VMs
 Virtualization Software	VirtualBox or VMware Workstation to create and manage virtual machines
 Operating System ISOs	Official ISO files for Windows 10 and Kali Linux
@@ -28,7 +28,7 @@ Kali Linux — attacker machine for simulating threats.
 
 Feel free to customize with more machines (like Ubuntu for ELK stack, Security Onion, etc.) as your system allows.
 
-#4 Get a Windows 10 ISO Image
+# 4 Get a Windows 10 ISO Image
 There are several ways to install Windows 10, including using third-party ISO files or pre-made images. However, creating your own Windows ISO image using Microsoft's official tool is one of the safest and most reliable methods.
 
 🔗 Link:
@@ -55,7 +55,7 @@ Select ISO file as the output format.
 
 Save the ISO file to your preferred location.
 
-#5 Set Up the Windows 10 Virtual Machine
+# 5 Set Up the Windows 10 Virtual Machine
 Open VirtualBox, click New.
 
 Enter name: Windows 10.
@@ -76,7 +76,7 @@ Review settings and click Finish.
 
 Power on the VM.
 
-#6 Install Windows 10
+# 6 Install Windows 10
 Choose language, region, and keyboard layout.
 
 When asked for a product key, click “I don’t have a product key”.
@@ -91,7 +91,7 @@ Select the virtual disk and click Next.
 
 Windows will now begin installation.
 
-#7 Install Kali Linux
+# 7 Install Kali Linux
 Download the official Kali Linux virtual machine image for easy import into VirtualBox.
 
 🔗 Link:
@@ -110,7 +110,7 @@ Open VirtualBox → File → Import Appliance.
 
 Import the Kali Linux VM and power it on.
 
-#8 Installing Sysmon and Splunk Before Isolation
+# 8 Installing Sysmon and Splunk Before Isolation
 Once you've set up the internal network and isolated the virtual machines, they will no longer have internet access. Therefore, make sure you complete the installations of Sysmon and Splunk while the network is still in NAT mode (the default setting). Once this is done, you can proceed to network isolation safely.
 
 To recap:
@@ -192,7 +192,7 @@ Cloud Network (Experimental)	Integrates with Oracle Cloud. Not stable or recomme
 Not Attached	The VM has no network connection at all. Completely isolated—most secure for analyzing malware.
 ✅ Reminder: For malware analysis, use "Host-only Adapter", "Internal Network", or "Not Attached" to reduce exposure to your host and external networks.
 
-#10 Malware Analysis Configuration (Recommended)
+# 10 Malware Analysis Configuration (Recommended)
 When analyzing malware, it’s essential to isolate the virtual machines from the internet and your host system. The Internal Network option is ideal in this case. This mode places your virtual machines in a completely separate network with no internet access or LAN access. You’ll need to manually assign IP addresses for each VM.
 
 ❗ Note:
@@ -267,7 +267,7 @@ Click Save
 
 ✅ Open a terminal and run ifconfig to confirm the IP.
 
-##Step 3: Test Connectivity
+## Step 3: Test Connectivity
 To test communication between the two VMs:
 
 From Kali: Run ping 192.168.20.10
@@ -340,7 +340,7 @@ This configuration ensures that Splunk is correctly set up to collect all releva
 
 Here's your full rewritten and neatly organized note with all points preserved, formatted clearly for ease of understanding and reference during your lab work or demonstrations:
 
-#14 Malware Generation and Handler Setup Using Metasploit
+# 14 Malware Generation and Handler Setup Using Metasploit
 📌 Step 1: Get the IP Address of Your Kali Machine
 We need the IP address of our Kali (attacker) machine to configure the malware:
 
